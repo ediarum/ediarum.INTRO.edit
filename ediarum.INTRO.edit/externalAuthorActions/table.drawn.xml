@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="table.drawn">
+  <a:name>Tabelle implizit bzw. explizit gezeichnet</a:name>
+  <a:description>Tabelle nicht nur implizit durch die Anordnung von Zeilen und Spalten vorhanden,
+    sondern durch explizite Zeichnung der Gitterlinien.</a:description>
+  <a:operations>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::table[@rend="drawn"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::table</a:argument>
+        <a:argument name="name">rend</a:argument>
+        <a:argument name="value"/>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::table</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::table</a:argument>
+        <a:argument name="name">rend</a:argument>
+        <a:argument name="value">drawn</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

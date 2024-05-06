@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="@cert[low]">
+  <a:name>Unsichere Identifizierung</a:name>
+  <a:description>Identifizierung (d.h. Verknüpfung) der Person unsicher</a:description>
+  <a:operations>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>self::placeName[not(@cert) and parent::correspAction]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="script">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <xsl:import href="${framework}/resources/setCert.xsl"/>
+</xsl:stylesheet></a:argument>
+        <a:argument name="sourceLocation">self::placeName</a:argument>
+        <a:argument name="targetLocation">self::placeName</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>self::persName[not(@cert) and parent::correspAction]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="script">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <xsl:import href="${framework}/resources/setCert.xsl"/>
+</xsl:stylesheet></a:argument>
+        <a:argument name="sourceLocation">self::persName</a:argument>
+        <a:argument name="targetLocation">self::persName</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::persName[not(@cert)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::persName</a:argument>
+        <a:argument name="name">cert</a:argument>
+        <a:argument name="value">low</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type="person" and not(@cert)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::rs[@type='person']</a:argument>
+        <a:argument name="name">cert</a:argument>
+        <a:argument name="value">low</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

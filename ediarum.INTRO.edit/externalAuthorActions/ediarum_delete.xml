@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="ediarum_delete">
+  <a:name>Komplett löschen</a:name>
+  <a:description>Auszeichnung und Text löschen</a:description>
+  <a:operations>
+    <a:operation id="DeleteElementOperation">
+      <a:xpathCondition>ancestor-or-self::dateline</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::dateline</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementOperation">
+      <a:xpathCondition>ancestor-or-self::address</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::address</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementOperation">
+      <a:xpathCondition>ancestor-or-self::salute</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::salute</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementOperation">
+      <a:xpathCondition>ancestor-or-self::signed</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::signed</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementsOperation">
+      <a:xpathCondition>ancestor-or-self::date[parent::correspAction]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocations">ancestor-or-self::date</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementsOperation">
+      <a:xpathCondition>ancestor-or-self::persName[parent::correspAction]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocations">ancestor-or-self::persName</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementsOperation">
+      <a:xpathCondition>ancestor-or-self::placeName[parent::correspAction]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocations">ancestor-or-self::placeName</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementsOperation">
+      <a:xpathCondition>ancestor-or-self::ref[parent::correspContext[count(ref) = 1]]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocations">ancestor-or-self::correspContext</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="DeleteElementsOperation">
+      <a:xpathCondition>ancestor-or-self::ref[parent::correspContext]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocations">ancestor-or-self::ref</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

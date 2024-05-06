@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="ediarum_delete_comment">
+  <a:name>Sachanmerkung löschen</a:name>
+  <a:description>Löscht eine Sachanmerkung, belässt jedoch den Manuskripttext in der
+    Datei</a:description>
+  <a:operations>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>ancestor-or-self::seg</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="caretPosition">After</a:argument>
+        <a:argument name="script">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <xsl:import href="${framework}/resources/delete_seg.xsl"/>
+</xsl:stylesheet></a:argument>
+        <a:argument name="sourceLocation">ancestor-or-self::seg</a:argument>
+        <a:argument name="targetLocation">ancestor-or-self::seg</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -198,9 +198,21 @@ from the contextual menu.
     </toolbars>
 
     <contextualMenu>
-      <submenu name="Other actions">
-        <addAction id="insert.note"/>
-      </submenu>
+      <addAction id="@select"/>
+      <addAction id="@cert[low]"/>
+      <addAction id="@cert[remove]"/>
+      <separator/>
+      <addAction id="paragraph"/>
+      <addAction id="writingSession_writer"/>
+      <addAction id="p[renditon=#mMM]"/>
+      <addAction id="@rendition[align]"/>
+      <addAction id="table.drawn"/>
+      <separator/>
+      <addAction id="ediarum_delete"/>
+      <addAction id="ediarum_unwrap"/>
+      <addAction id="ediarum_delete_comment"/>
+      <separator/>
+      <addAction id="printPDF"/>
     </contextualMenu>
 
     <contentCompletion>

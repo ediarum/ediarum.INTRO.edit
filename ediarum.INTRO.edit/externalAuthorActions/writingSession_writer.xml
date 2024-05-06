@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="writingSession_writer">
+  <a:name>Schreibakt Schreiber zuweisen</a:name>
+  <a:description>Bestehendem Schreibakt einen Schreiber zuweisen.</a:description>
+  <a:operations>
+    <a:operation id="ExecuteMultipleActionsOperation">
+      <a:xpathCondition>ancestor-or-self::div[@type="writingSession"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="actionIDs">writingSession_writer_1
+@hand</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ExecuteMultipleActionsOperation">
+      <a:xpathCondition>ancestor-or-self::TEI[@telota:doctype="document"] and ancestor-or-self::div[@type="writingSession"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="actionIDs">writingSession_writer_1
+@hand</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ExecuteMultipleActionsOperation">
+      <a:xpathCondition>ancestor-or-self::TEI[@telota:doctype="document"] and ancestor-or-self::div</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="actionIDs">writingSession_2
+writingSession_writer_1
+@hand</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

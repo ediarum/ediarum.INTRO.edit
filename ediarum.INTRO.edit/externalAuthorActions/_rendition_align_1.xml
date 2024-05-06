@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="@rendition[align]_1">
+  <a:name>Ausrichtung ändern</a:name>
+  <a:operations>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::dateline[@rendition="#right"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::dateline</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="namespace"/>
+        <a:argument name="value"/>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::dateline[not(@rendition)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::dateline</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="namespace"/>
+        <a:argument name="value">#right</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::cell[@rendition="#right"] or
+ancestor-or-self::cell[@rendition="#c"] or
+ancestor-or-self::cell[not(@rendition)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::cell</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="namespace"/>
+        <a:argument name="value">${ask('Ausrichtung ändern', editable_combobox, ('#left':'linksbündig';'#right':'rechtsbündig';'#c':'zentriert';'':'';), '#left')}</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::cell[not(@rendition)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::cell</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="namespace"/>
+        <a:argument name="value">${ask('Ausrichtung ändern', editable_combobox, ('':'linksbündig';'#right':'rechtsbündig';'#c':'zentriert';'':'';), '')}</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

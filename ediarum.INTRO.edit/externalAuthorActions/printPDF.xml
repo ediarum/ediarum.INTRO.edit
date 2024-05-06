@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="printPDF">
+  <a:name>PDF erstellen</a:name>
+  <a:description>Erstellt aus dem aktuell geöffnetem Dokument ein PDF.</a:description>
+  <a:operations>
+    <a:operation id="ExecuteTransformationScenariosOperation">
+      <a:arguments>
+        <a:argument name="scenarioNames">ediarum.BASE.pdf_xsl
+ediarum.BASE.pdf_css</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

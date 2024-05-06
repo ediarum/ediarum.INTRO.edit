@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="writingSession_writer_1">
+  <a:name>Schreibakt Schreiber zuweisen</a:name>
+  <a:description>Bestehendem Schreibakt einen Schreiber zuweisen.</a:description>
+  <a:operations>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::div[@type="writingSession"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::div[@type="writingSession"]</a:argument>
+        <a:argument name="name">hand</a:argument>
+        <a:argument name="value">${ask('Schreiber', combobox, ('#author':'Autor dieses Textes';'#addressee':'Empfänger des Briefes';'#index':'Person aus dem Register';'#unknown':'Unbekannt'), '#author')}</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

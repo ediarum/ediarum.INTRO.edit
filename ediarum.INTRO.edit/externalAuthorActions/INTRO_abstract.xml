@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_abstract">
+  <a:name>Abstract</a:name>
+  <a:description>Abstract mit kurzer Zusammenfassung des Textes</a:description>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>//teiHeader/profileDesc[correspDesc and not(abstract)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><abstract xmlns="http://www.tei-c.org/ns/1.0"><p>${caret}</p></abstract>
+</a:argument>
+        <a:argument name="insertLocation">//profileDesc/correspDesc</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>//teiHeader/profileDesc[creation and not(abstract)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><abstract xmlns="http://www.tei-c.org/ns/1.0"><p>${caret}</p></abstract>
+</a:argument>
+        <a:argument name="insertLocation">//profileDesc/creation</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>//teiHeader/profileDesc[not(abstract)]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><abstract xmlns="http://www.tei-c.org/ns/1.0"><p>${caret}</p></abstract>
+</a:argument>
+        <a:argument name="insertLocation">//profileDesc</a:argument>
+        <a:argument name="insertPosition">Inside as first child</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>not(//profileDesc)</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><profileDesc xmlns="http://www.tei-c.org/ns/1.0">
+  <abstract><p>${caret}</p></abstract>
+</profileDesc></a:argument>
+        <a:argument name="insertLocation">//fileDesc</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

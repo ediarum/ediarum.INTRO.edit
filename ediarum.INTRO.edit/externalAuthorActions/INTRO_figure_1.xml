@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_figure_1">
+  <a:name>Zeichnung</a:name>
+  <a:smallIconPath href="${framework}/icons/figure16.png"/>
+  <a:largeIconPath href="${framework}/icons/figure20.png"/>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("figure")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><figure xmlns="http://www.tei-c.org/ns/1.0" facs="${ask('Dateiname', generic, '')}">
+  <figDesc>${caret}</figDesc>
+</figure></a:argument>
+        <a:argument name="insertLocation"/>
+        <a:argument name="insertPosition">Inside as first child</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

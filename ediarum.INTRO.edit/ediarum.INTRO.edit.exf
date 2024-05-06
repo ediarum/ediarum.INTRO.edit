@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+
+The file must be saved inside a framework directory, the same place where a *.framework file should sit.
+
+To generate a *.framework file out of the script, you need to use the "Compile Framework Extension script" action 
+from the contextual menu.
+-->
+<script xmlns="http://www.oxygenxml.com/ns/framework/extend"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/framework/extend http://www.oxygenxml.com/ns/framework/extend/frameworkExtensionScript.xsd">
+  <name>ediarum.INTRO.edit</name>
+  <description/>
+  <priority>High</priority>
+  <initialPage>Author</initialPage>
+  <associationRules>
+    <!-- Associate all documents with @telota:doctype="introduction*" -->
+    <addRule attributeNamespace="http://www.telota.de" attributeLocalName="doctype" attributeValue="introduction*"/>
+  </associationRules>
+  <validationScenarios>
+    <addScenarios href="validation/ediarum.INTRO"/>
+  </validationScenarios>
+  
+  <author>
+    <!-- 
+      Author Actions are loaded from these directories:
+      {framework_directory}/externalAuthorActions
+      {framework_directory}/{framework_file_name}_externalAuthorActions
+      
+      https://www.oxygenxml.com/doc/versions/22.1/ug-editor/topics/dg-create-custom-actions.html#dg-create-custom-actions__section_2
+    -->
+    <css>
+      <addCss path="${framework}/css/standard.css"/>
+      <addCss path="${framework}/css/standard_intro.css"/>
+    </css>
+    <toolbars>
+      <toolbar name="Text">
+        <group name="Kapitel">
+          <addAction id="INTRO_div"/>
+          <addAction id="INTRO_div_innerDIV"/>
+        </group>
+        <addAction id="paragraph"/>
+        <group name="Zeilenumbruch" smallIconPath="${framework}/icons/lb16.gif" largeIconPath="${framework}/icons/lb20.gif">
+          <addAction id="lb"/>
+          <addAction id="lb[break]"/>
+          <addAction id="lb[break-hyphen]"/>
+        </group>
+        <group name="Listen" smallIconPath="${framework}/icons/unorderedList16.png" largeIconPath="${framework}/icons/unorderedList20.png">
+          <addAction id="INTRO_itemizedlist"/>
+          <addAction id="item"/>
+        </group>
+        <addAction id="INTRO_note[foot]"/>
+        <addAction id="INTRO_figure_1"/>
+        <separator/>
+        <addAction id="INTRO_hi[#b]"/>
+        <addAction id="INTRO_hi[#i]"/>
+        <addAction id="hi[underline]"/>
+        <separator/>
+        <group name="Verweiese" smallIconPath="${framework}/icons/verweis16.gif" largeIconPath="${framework}/icons/verweis20.gif">
+          <addAction id="anchor"/>
+          <addAction id="ref"/>
+          <addAction id="ref[note]"/>
+          <addAction id="INTRO_ref[p]"/>
+          <addAction id="INTRO_ref[note]"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="ref[hasAttachement]"/>
+          <addAction id="ref[attachedTo]"/>
+          <addAction id="INTRO_ref[URL]"/>
+        </group>
+        <group name="Textstellen indizieren" smallIconPath="${framework}/icons/index16.gif" largeIconPath="${framework}/icons/index20.gif">
+          <addAction id="index_personen"/>
+          <addAction id="index_places"/>
+          <addAction id="index_bibl"/>
+        </group>
+        <group name="Namen kennzeichnen" smallIconPath="${framework}/icons/names16.gif" largeIconPath="${framework}/icons/names20.gif">
+          <addAction id="persName"/>
+          <addAction id="orgName"/>
+          <addAction id="placeName"/>
+          <addAction id="bibl"/>
+          <addAction id="bibl_zotero"/>
+          <addAction id="rs[term]"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="rs"/>
+        </group>
+        <group name="Zitate" smallIconPath="${framework}/icons/q16.gif" largeIconPath="${framework}/icons/q20.gif">
+          <addAction id="INTRO_quote[rendition=inline]"/>
+          <addAction id="INTRO_quote[rendition=block]"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="INTRO_quote[rendition=introQuote]"/>
+        </group>
+        <group name="AutorIn">
+          <addAction id="INTRO_author"/>
+          <addAction id="INTRO_affiliation"/>
+          <addAction id="INTRO_email"/>
+          <addAction id="INTRO_author_note"/>
+        </group>
+      </toolbar>
+      <toolbar name="Sonderzeichen">
+        <group name="Symbole">
+          <addAction id="symbol_letters"/>
+          <addAction id="symbol_fracture"/>
+          <addAction id="symbol_units"/>
+          <addAction id="symbol_symbols"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="symbol_macron"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="symbol_enDash"/>
+          <addAction id="symbol_emDash"/>
+          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <addAction id="symbol_ellipsis"/>
+        </group>
+      </toolbar>
+      <toolbar name="Website">
+        <addAction id="website"/>
+      </toolbar>
+    </toolbars>
+
+    <contextualMenu>
+      <submenu name="Other actions">
+        <addAction id="insert.note"/>
+      </submenu>
+    </contextualMenu>
+
+    <contentCompletion>
+      <authorActions>
+        <addAction id="insert.note" replacedElement="note" inCCWindow="true"/>
+      </authorActions>
+    </contentCompletion>
+  </author>
+
+
+</script>

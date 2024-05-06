@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="rs_zwei">
+  <a:name>Anapher</a:name>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='person']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_person}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='person']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='org']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_org}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='org']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='term']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_item}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='term']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='bibl-zotero']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_bibl_zotero}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/tei:span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//tei:item</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='bibl-zotero']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='bibl']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_bibl}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='bibl']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::rs[@type='place']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_place}</a:argument>
+        <a:argument name="attribute name">key</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::rs[@type='place']</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::rs</a:argument>
+        <a:argument name="name">notExistant</a:argument>
+        <a:argument name="value"/>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

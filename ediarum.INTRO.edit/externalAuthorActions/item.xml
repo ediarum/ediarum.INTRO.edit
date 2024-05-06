@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="item">
+  <a:name>Listenpunkt einfügen</a:name>
+  <a:description>Listenpunkt einfügen</a:description>
+  <a:smallIconPath href="${framework}/icons/list_item16.png"/>
+  <a:largeIconPath href="${framework}/icons/list_item20.gif"/>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>self::*:list[namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><item xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>ancestor-or-self::node()[namespace-uri() = "http://www.tei-c.org/ns/1.0"][self::*:list | self::*:item][1][self::*:list]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><item xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
+        <a:argument name="insertLocation">ancestor-or-self::node()[parent::*:list][namespace-uri() = "http://www.tei-c.org/ns/1.0"][1]</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>ancestor-or-self::*:item[namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><item xmlns="http://www.tei-c.org/ns/1.0"/></a:argument>
+        <a:argument name="insertLocation">ancestor-or-self::*:item[1][namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

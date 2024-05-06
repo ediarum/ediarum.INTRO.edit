@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="anchor">
+  <a:name>Verweisziel markieren</a:name>
+  <a:description>Markiert das Ziel eines Verweises</a:description>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation">
+      <a:xpathCondition>oxy:allows-child-element("anchor")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="first element"><anchor xmlns="http://www.tei-c.org/ns/1.0" type="target" xml:id="start_$ID"/></a:argument>
+        <a:argument name="id">${id}</a:argument>
+        <a:argument name="second element"><anchor xmlns="http://www.tei-c.org/ns/1.0" type="target" xml:id="stop_$ID"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

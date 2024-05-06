@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="symbol_fracture">
+  <a:name>Bruchzahlen</a:name>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:arguments>
+        <a:argument name="fragment">${ask('Bruchzahl auswählen', combobox, ('¼':'1/4';'½':'1/2';'¾':'3/4';'⅐':'1/7';'⅑':'1/9';'⅒':'1/10';'⅓':'1/3';'⅔':'2/3';'⅕':'1/5';'⅖':'2/5';'⅗':'3/5';'⅘':'4/5';'⅙':'1/6';'⅚':'5/6';'⅛':'1/8';'⅜':'3/8';'⅝':'5/8';'⅞':'7/8';), '')}</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_hi[#b]">
+  <a:name>Fettdruck</a:name>
+  <a:description>Fettgedruckter Text (nur bei Transkription gedruckter Texte)</a:description>
+  <a:smallIconPath href="${framework}/icons/bold16.png"/>
+  <a:largeIconPath href="${framework}/icons/bold20.png"/>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("*:hi")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><hi xmlns="http://www.tei-c.org/ns/1.0" rendition="#b"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

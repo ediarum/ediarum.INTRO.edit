@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="index_places">
+  <a:name>Ortsindex</a:name>
+  <a:description>Textstelle, die einen Ort behandelt, indizieren</a:description>
+  <a:smallIconPath href="${framework}/icons/index_placeName16.gif"/>
+  <a:largeIconPath href="${framework}/icons/index_placeName20.gif"/>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterSurroundWithDifferentFragmentsOperation">
+      <a:xpathCondition>oxy:allows-child-element("index")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_place}</a:argument>
+        <a:argument name="element">"<index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$[ID]" indexName="places" corresp="&#34; + @xml:id + &#34;"><term>" + /span + "</term></index>$[SELECTION]<anchor xmlns="http://www.tei-c.org/ns/1.0" type="index" xml:id="$[ID]"/>"</a:argument>
+        <a:argument name="expression">$XPATH{/span}</a:argument>
+        <a:argument name="first element"><index xmlns="http://www.tei-c.org/ns/1.0" spanTo="#$ID" indexName="places" corresp="$XPATH{@xml:id}"><term>$XPATH{/span}</term></index></a:argument>
+        <a:argument name="id">i${id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+        <a:argument name="second element"><anchor xmlns="http://www.tei-c.org/ns/1.0" xml:id="$ID" type="index"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

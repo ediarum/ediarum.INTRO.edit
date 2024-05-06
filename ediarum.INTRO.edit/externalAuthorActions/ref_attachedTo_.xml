@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="ref[attachedTo]">
+  <a:name>Brief/Dokument ist Beilage zu ...</a:name>
+  <a:description>Verlinkung zu einem Brief oder Dokument anlegen, zu dem vorliegendes Dokument/Brief
+    als Beilage zugeordnet ist.</a:description>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.InsertReferenceForLinkTargetOperation">
+      <a:xpathCondition>ancestor-or-self::note[parent::correspDesc]
+														or ancestor-or-self::note[parent::notesStmt]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="altern. element"><ref xmlns="http://www.tei-c.org/ns/1.0" target="$FILE_ID" type="attachedTo"/></a:argument>
+        <a:argument name="element"><ref xmlns="http://www.tei-c.org/ns/1.0" target="$FILE_ID" type="attachedTo"/></a:argument>
+        <a:argument name="id start prefix">start_</a:argument>
+        <a:argument name="id stop prefix">stop_</a:argument>
+        <a:argument name="id-attribute">xml:id</a:argument>
+        <a:argument name="root-path">${ediarum_projects_directory_webdav}${ediarum_project_name}/data</a:argument>
+        <a:argument name="xpath">//anchor</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

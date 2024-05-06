@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_itemizedlist">
+  <a:name>Liste einfügen</a:name>
+  <a:description>Liste einfügen</a:description>
+  <a:smallIconPath href="${framework}/icons/unorderedList16.png"/>
+  <a:largeIconPath href="${framework}/icons/unorderedList20.png"/>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>self::*:list[namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><item xmlns="http://www.tei-c.org/ns/1.0"><list rendition="${ask('Aufzählungszeichen', combobox, ('ordered decimal':'1.,2.,3.';'bulleted':'Listenpunkte';'none':'keine';'ordered lower-roman':'i.,ii.,iii.';'ordered upper-roman':'I.,II.,III.';'ordered lower-latin':'a.,b.,c.';'ordered upper-latin':'A.,B.,C.';), 'bulleted')}"><item/></list></item></a:argument>
+        <a:argument name="insertPosition">Inside as first child</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>ancestor-or-self::text</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><list xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Aufzählungszeichen', combobox, ('ordered decimal':'1.,2.,3.';'bulleted':'Listenpunkte';'none':'keine';'ordered lower-roman':'i.,ii.,iii.';'ordered upper-roman':'I.,II.,III.';'ordered lower-latin':'a.,b.,c.';'ordered upper-latin':'A.,B.,C.';), 'bulleted')}">
+  <item/>
+</list></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

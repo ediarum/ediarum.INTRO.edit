@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_note[foot]">
+  <a:name>Anmerkung</a:name>
+  <a:description>Anmerkung, die im Druck in einer Fußnote erscheint</a:description>
+  <a:smallIconPath href="${framework}/icons/note16.gif"/>
+  <a:largeIconPath href="${framework}/icons/note20.gif"/>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("note")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><note xmlns="http://www.tei-c.org/ns/1.0" place="foot"/></a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("note")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><note xmlns="http://www.tei-c.org/ns/1.0" place="foot" resp="editor"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

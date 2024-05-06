@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="website">
+  <a:name>Website</a:name>
+  <a:description>Website im Browser öffnen</a:description>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.OpenFileOperation">
+      <a:arguments>
+        <a:argument name="URL">${ediarum_website_homepage}</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="ref[note]">
+  <a:name>Verweis auf Sachanmerkung</a:name>
+  <a:description>Expliziten Verweis auf eine Sachanmerkung im selben oder einem anderen Manuskript
+    einfügen</a:description>
+  <a:smallIconPath href="${framework}/icons/rs16.gif"/>
+  <a:largeIconPath href="${framework}/icons/rs20.gif"/>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation">
+      <a:xpathCondition>ancestor-or-self::text 
+or ancestor-or-self::abstract 
+or ancestor-or-self::correspDesc/note
+or ancestor-or-self::note[parent::notesStmt] </a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_comments}</a:argument>
+        <a:argument name="element"><ref xmlns="http://www.tei-c.org/ns/1.0" target="$ITEMS"/></a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@id}</a:argument>
+        <a:argument name="multiple selection">false</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

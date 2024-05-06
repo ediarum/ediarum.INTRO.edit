@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="orgName">
+  <a:name>Organisationsname</a:name>
+  <a:description>Im Manuskript explizit erwähnte Institution, Firma oder sonstige Organisation
+    kennzeichnen und verlinken</a:description>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation">
+      <a:xpathCondition>ancestor-or-self::text
+or ancestor-or-self::abstract 
+or ancestor-or-self::correspDesc/note
+or ancestor-or-self::note[parent::notesStmt]
+or ancestor-or-self::p[parent::physDesc]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_org}</a:argument>
+        <a:argument name="element"><orgName xmlns="http://www.tei-c.org/ns/1.0" key="$ITEMS"/></a:argument>
+        <a:argument name="item rendering">$XPATH{/span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//li</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

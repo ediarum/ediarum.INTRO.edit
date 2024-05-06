@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="lb[break]">
+  <a:name>Zeilenumbruch im Wort</a:name>
+  <a:description>Zeilenumbruch einfügen, der ein Wort trennt - allerdings ohne
+    Trennzeichen</a:description>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element('lb')</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><lb xmlns="http://www.tei-c.org/ns/1.0" break="no"/>${caret}</a:argument>
+        <a:argument name="insertPosition">Inside as first child</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

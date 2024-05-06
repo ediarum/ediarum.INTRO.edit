@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_ref[URL]">
+  <a:name>Link auf externe Website</a:name>
+  <a:description>Link auf externe Website, nach Möglichkeit hier Permalinks
+    verwenden</a:description>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("ref")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><ref xmlns="http://www.tei-c.org/ns/1.0" target="${ask('URL eingeben', url, '')}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="hi[underline]">
+  <a:name>Unterstrichen</a:name>
+  <a:description>Unterstrichene Textstelle</a:description>
+  <a:smallIconPath href="${framework}/icons/underlined16.png"/>
+  <a:largeIconPath href="${framework}/icons/underlined20.png"/>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("hi")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><hi xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Art der Unterstreichung', combobox, ('#u':'Einfach unterstrichen';'#uu':'Doppelt unterstrichen';'#mMM':'Am Rand angestrichen';), '#u')}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accelerator>ctrl shift U</a:accelerator>
+  <a:accessKey>U</a:accessKey>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

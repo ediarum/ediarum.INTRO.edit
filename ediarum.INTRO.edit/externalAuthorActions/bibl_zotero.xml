@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="bibl_zotero">
+  <a:name>Werktitel (Zotero)</a:name>
+  <a:description>Im Manuskript explizit erwähnte Werktitel kennzeichnen</a:description>
+  <a:operations>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::bibl[parent::witness]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_bibl_zotero}</a:argument>
+        <a:argument name="attribute name">sameAs</a:argument>
+        <a:argument name="attribute value">$ITEMS</a:argument>
+        <a:argument name="item rendering">$XPATH{/tei:span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//tei:item</a:argument>
+        <a:argument name="xpath to element of the attribute">ancestor-or-self::bibl[parent::witness]</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="org.bbaw.telota.ediarum.RegisterSurroundWithElementOperation">
+      <a:xpathCondition>ancestor-or-self::text
+or ancestor-or-self::abstract 
+or ancestor-or-self::correspDesc/note
+or ancestor-or-self::notesStmt/note</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="URL">${ediarum_project_domain}${ediarum_projects_directory}${ediarum_project_name}${ediarum_index_bibl_zotero}</a:argument>
+        <a:argument name="element"><bibl xmlns="http://www.tei-c.org/ns/1.0" sameAs="$ITEMS"/></a:argument>
+        <a:argument name="item rendering">$XPATH{/tei:span}</a:argument>
+        <a:argument name="item separator"> </a:argument>
+        <a:argument name="item variable">$XPATH{@xml:id}</a:argument>
+        <a:argument name="namespaces">tei:http://www.tei-c.org/ns/1.0</a:argument>
+        <a:argument name="node">//tei:item</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

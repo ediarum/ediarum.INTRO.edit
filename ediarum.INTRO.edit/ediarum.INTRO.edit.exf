@@ -235,11 +235,6 @@ from the contextual menu.
 
     </contextualMenu>
 
-    <contentCompletion>
-      <authorActions>
-        <addAction id="insert.note" replacedElement="note" inCCWindow="true"/>
-      </authorActions>
-    </contentCompletion>
   </author>
 
 </script>

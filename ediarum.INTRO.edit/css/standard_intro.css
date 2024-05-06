@@ -152,6 +152,15 @@ licence:before {
     content: "Lizenz: "
 }
 
+/* Overwrite some standard.css rules for tei:abstract (i. e. "Regest" in ediarum.BASE.edit) here */
+profileDesc abstract:before {
+    content: "Abstract: ";
+}
+
+profileDesc abstract p {
+    -oxy-placeholder-content: "[Abstract hier eingeben]"
+}
+
 /* ################
  * ##### TEXT #####
  * ################ */

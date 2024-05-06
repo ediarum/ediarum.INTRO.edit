@@ -5,6 +5,8 @@
   id="anchor">
   <a:name>Verweisziel markieren</a:name>
   <a:description>Markiert das Ziel eines Verweises</a:description>
+  <a:smallIconPath href="${framework}/icons/anchor_markierung16.gif"/>
+  <a:largeIconPath href="${framework}/icons/anchor_markierung20.gif"/>
   <a:operations>
     <a:operation id="org.bbaw.telota.ediarum.SurroundWithDifferentFragmentsOperation">
       <a:xpathCondition>oxy:allows-child-element("anchor")</a:xpathCondition>

@@ -21,6 +21,11 @@ from the contextual menu.
   <validationScenarios>
     <addScenarios href="validation/ediarum.INTRO"/>
   </validationScenarios>
+  <classpath>
+    <addEntry path="${framework}/tei.jar"/>
+    <addEntry path="${framework}/ediarum.jar"/>
+    <addEntry path="${framework}/resources/"/>
+  </classpath>
 
   <author>
     <!-- 

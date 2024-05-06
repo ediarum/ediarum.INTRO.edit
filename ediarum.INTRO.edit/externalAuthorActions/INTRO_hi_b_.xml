@@ -15,5 +15,6 @@
       </a:arguments>
     </a:operation>
   </a:operations>
+  <a:accelerator>ctrl shift F</a:accelerator>
   <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
 </a:authorAction>

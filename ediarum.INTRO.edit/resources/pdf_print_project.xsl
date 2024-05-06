@@ -13,7 +13,7 @@
     <!-- ### Project - Einbindungen ### -->
     <!-- ############################## -->
     
-    <xsl:import href="../../ediarum.BASE.edit/resources/pdf_print.xsl"/>
+    <xsl:import href="pdf_print.xsl"/>
     
     
     

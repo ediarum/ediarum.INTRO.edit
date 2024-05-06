@@ -30,11 +30,14 @@ from the contextual menu.
       
       https://www.oxygenxml.com/doc/versions/22.1/ug-editor/topics/dg-create-custom-actions.html#dg-create-custom-actions__section_2
     -->
+
     <css>
       <addCss path="${framework}/css/standard.css"/>
       <addCss path="${framework}/css/standard_intro.css"/>
     </css>
+
     <menu name="ediarum">
+
       <submenu name="Textstruktur">
         <addAction id="paragraph"/>
         <submenu name="Zeilenumbruch" iconPath="${framework}/icons/lb20.gif">
@@ -51,12 +54,14 @@ from the contextual menu.
           <addAction id="INTRO_div_innerDIV"/>
         </submenu>
       </submenu>
+
       <submenu name="Textbearbeitungen">
         <addAction id="INTRO_hi[#b]"/>
         <addAction id="INTRO_hi[#i]"/>
         <addAction id="hi[underline]"/>
         <addAction id="spacing"/>
       </submenu>
+
       <submenu name="HerausgeberInnenbearbeitungen">
         <addAction id="INTRO_note[foot]"/>
         <submenu name="Verweise" iconPath="${framework}/icons/verweis20.gif">
@@ -67,14 +72,18 @@ from the contextual menu.
           <addAction id="INTRO_ref[note]"/>
           <addAction id="INTRO_ref[URL]"/>
         </submenu>
+
         <submenu name="Datumsangaben" iconPath="${framework}/icons/date20.gif">
           <addAction id="date-when"/>
           <addAction id="from-to"/>
           <addAction id="date-notBeforeAfter"/>
         </submenu>
+
         <addAction id="foreign"/>
         <addAction id="hi[#aq_#fr]"/>
+
       </submenu>
+
       <submenu name="Indizierung &amp; Namen">
         <addAction id="persName"/>
         <addAction id="orgName"/>
@@ -87,7 +96,9 @@ from the contextual menu.
         <addAction id="index_places"/>
         <addAction id="index_bibl"/>
       </submenu>
+
       <separator/>
+
       <submenu name="Metadaten">
         <addAction id="INTRO_title[@type=sub]"/>
         <addAction id="editor"/>
@@ -98,12 +109,16 @@ from the contextual menu.
           <addAction id="revisionDesc[@status]"/>
         </submenu>
       </submenu>
+
       <submenu name="Sonderfunktionen">
         <addAction id="INTRO_number_p_note"/>
         <addAction id="ediarum_unwrap"/>
       </submenu>
+
     </menu>
+
     <toolbars>
+
       <toolbar name="Text">
         <group name="Kapitel">
           <addAction id="INTRO_div"/>
@@ -174,6 +189,7 @@ from the contextual menu.
           <addAction id="INTRO_author_note"/>
         </group>
       </toolbar>
+
       <toolbar name="Sonderzeichen">
         <group name="Symbole">
           <addAction id="symbol_letters"/>
@@ -192,12 +208,15 @@ from the contextual menu.
           <addAction id="symbol_ellipsis"/>
         </group>
       </toolbar>
+
       <toolbar name="Website">
         <addAction id="website"/>
       </toolbar>
+
     </toolbars>
 
     <contextualMenu>
+
       <addAction id="@select"/>
       <addAction id="@cert[low]"/>
       <addAction id="@cert[remove]"/>
@@ -213,6 +232,7 @@ from the contextual menu.
       <addAction id="ediarum_delete_comment"/>
       <separator/>
       <addAction id="printPDF"/>
+
     </contextualMenu>
 
     <contentCompletion>
@@ -221,6 +241,5 @@ from the contextual menu.
       </authorActions>
     </contentCompletion>
   </author>
-
 
 </script>

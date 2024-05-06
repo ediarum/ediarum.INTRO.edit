@@ -15,12 +15,13 @@ from the contextual menu.
   <initialPage>Author</initialPage>
   <associationRules>
     <!-- Associate all documents with @telota:doctype="introduction*" -->
-    <addRule attributeNamespace="http://www.telota.de" attributeLocalName="doctype" attributeValue="introduction*"/>
+    <addRule attributeNamespace="http://www.telota.de" attributeLocalName="doctype"
+      attributeValue="introduction*"/>
   </associationRules>
   <validationScenarios>
     <addScenarios href="validation/ediarum.INTRO"/>
   </validationScenarios>
-  
+
   <author>
     <!-- 
       Author Actions are loaded from these directories:
@@ -40,12 +41,14 @@ from the contextual menu.
           <addAction id="INTRO_div_innerDIV"/>
         </group>
         <addAction id="paragraph"/>
-        <group name="Zeilenumbruch" smallIconPath="${framework}/icons/lb16.gif" largeIconPath="${framework}/icons/lb20.gif">
+        <group name="Zeilenumbruch" smallIconPath="${framework}/icons/lb16.gif"
+          largeIconPath="${framework}/icons/lb20.gif">
           <addAction id="lb"/>
           <addAction id="lb[break]"/>
           <addAction id="lb[break-hyphen]"/>
         </group>
-        <group name="Listen" smallIconPath="${framework}/icons/unorderedList16.png" largeIconPath="${framework}/icons/unorderedList20.png">
+        <group name="Listen" smallIconPath="${framework}/icons/unorderedList16.png"
+          largeIconPath="${framework}/icons/unorderedList20.png">
           <addAction id="INTRO_itemizedlist"/>
           <addAction id="item"/>
         </group>
@@ -56,36 +59,43 @@ from the contextual menu.
         <addAction id="INTRO_hi[#i]"/>
         <addAction id="hi[underline]"/>
         <separator/>
-        <group name="Verweiese" smallIconPath="${framework}/icons/verweis16.gif" largeIconPath="${framework}/icons/verweis20.gif">
+        <group name="Verweiese" smallIconPath="${framework}/icons/verweis16.gif"
+          largeIconPath="${framework}/icons/verweis20.gif">
           <addAction id="anchor"/>
           <addAction id="ref"/>
           <addAction id="ref[note]"/>
           <addAction id="INTRO_ref[p]"/>
           <addAction id="INTRO_ref[note]"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="ref[hasAttachement]"/>
           <addAction id="ref[attachedTo]"/>
           <addAction id="INTRO_ref[URL]"/>
         </group>
-        <group name="Textstellen indizieren" smallIconPath="${framework}/icons/index16.gif" largeIconPath="${framework}/icons/index20.gif">
+        <group name="Textstellen indizieren" smallIconPath="${framework}/icons/index16.gif"
+          largeIconPath="${framework}/icons/index20.gif">
           <addAction id="index_personen"/>
           <addAction id="index_places"/>
           <addAction id="index_bibl"/>
         </group>
-        <group name="Namen kennzeichnen" smallIconPath="${framework}/icons/names16.gif" largeIconPath="${framework}/icons/names20.gif">
+        <group name="Namen kennzeichnen" smallIconPath="${framework}/icons/names16.gif"
+          largeIconPath="${framework}/icons/names20.gif">
           <addAction id="persName"/>
           <addAction id="orgName"/>
           <addAction id="placeName"/>
           <addAction id="bibl"/>
           <addAction id="bibl_zotero"/>
           <addAction id="rs[term]"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="rs"/>
         </group>
-        <group name="Zitate" smallIconPath="${framework}/icons/q16.gif" largeIconPath="${framework}/icons/q20.gif">
+        <group name="Zitate" smallIconPath="${framework}/icons/q16.gif"
+          largeIconPath="${framework}/icons/q20.gif">
           <addAction id="INTRO_quote[rendition=inline]"/>
           <addAction id="INTRO_quote[rendition=block]"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="INTRO_quote[rendition=introQuote]"/>
         </group>
         <group name="AutorIn">
@@ -101,12 +111,15 @@ from the contextual menu.
           <addAction id="symbol_fracture"/>
           <addAction id="symbol_units"/>
           <addAction id="symbol_symbols"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="symbol_macron"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="symbol_enDash"/>
           <addAction id="symbol_emDash"/>
-          <separator/> <!-- Works, but is not allowed by schema in a group. -->
+          <separator/>
+          <!-- Works, but is not allowed by schema in a group. -->
           <addAction id="symbol_ellipsis"/>
         </group>
       </toolbar>

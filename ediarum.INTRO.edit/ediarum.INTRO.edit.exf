@@ -26,6 +26,9 @@ from the contextual menu.
     <addEntry path="${framework}/ediarum.jar"/>
     <addEntry path="${framework}/resources/"/>
   </classpath>
+  <documentTemplates>
+    <addEntry path="${frameworkDir}/templates/"/>
+  </documentTemplates>
 
   <author>
     <!-- 

@@ -23,98 +23,101 @@ along with ediarum.BASE. If not, see <http://www.gnu.org/licenses/>.
 /* #####################
  * ##### teiHeader #####
  * ##################### */
- 
+
 @namespace oxy "http://www.oxygenxml.com/extensions/author";
 
-oxy|comment{
-    visibility:-oxy-collapse-text;
+oxy|comment {
+    visibility: -oxy-collapse-text;
     -oxy-display-tags: none;
 }
 
-title[type='main']{
+title[type='main'] {
     -oxy-placeholder-content: "Titel eintragen";
-   -oxy-show-placeholder: always;
-    
+    -oxy-show-placeholder: always;
+
 }
 
-title[type='sub']{
-   font-size: 1.3em;
-   -oxy-placeholder-content: "Untertitel eintragen";
-   -oxy-show-placeholder: always;
+title[type='sub'] {
+    font-size: 1.3em;
+    -oxy-placeholder-content: "Untertitel eintragen";
+    -oxy-show-placeholder: always;
 }
 
-title:after{
+title:after {
     content: "\A"
 }
-author{
-     -oxy-display-tags: none;
-     display: block;
-     margin:0 0 0.5em 0;
+
+author {
+    -oxy-display-tags: none;
+    display: block;
+    margin: 0 0 0.5em 0;
 }
 
 affiliation,
 email,
-note{
+note {
     -oxy-display-tags: none;
 }
 
-author affiliation:before{
+author affiliation:before {
     content: "(";
 }
-author affiliation:after{
+
+author affiliation:after {
     content: ")";
 }
 
 author email:before,
-author note:before{
+author note:before {
     content: "\A";
     /*display: block;*/
 }
 
 author email,
-author note{
+author note {
     margin-left: 10px;
 }
 
-author affiliation{
+author affiliation {
     -oxy-placeholder-content: "Zugehörigkeit";
     -oxy-show-placeholder: always;
 }
 
-author email{
+author email {
     -oxy-placeholder-content: "E-Mail";
     -oxy-show-placeholder: always;
 }
 
-author note{
+author note {
     -oxy-placeholder-content: "weitere Informationen";
     -oxy-show-placeholder: always;
 }
 
 
 editionStmt {
-    display:block;
+    display: block;
     -oxy-display-tags: none;
 }
 
-edition{
+edition {
     -oxy-display-tags: none;
 }
 
-edition title[type='main']{
+edition title[type='main'] {
     -oxy-placeholder-content: "Editionstitel eingeben";
     -oxy-show-placeholder: always;
     -oxy-display-tags: none;
 }
-edition title[type='sub']{
-    font-size:small;
+
+edition title[type='sub'] {
+    font-size: small;
     -oxy-placeholder-content: "Untertitel der Edition eingeben";
     -oxy-show-placeholder: always;
     -oxy-display-tags: none;
 }
 
 publicationStmt {
-    display:block;
+    display: block;
     -oxy-display-tags: none;
     margin: 1em 0 1em 0;
 }
@@ -125,7 +128,7 @@ publisher {
     -oxy-show-placeholder: always;
 }
 
-publisher ref{
+publisher ref {
     -oxy-display-tags: none;
 }
 
@@ -135,17 +138,17 @@ pubPlace {
     -oxy-display-tags: none;
 }
 
-publicationStmt pubPlace:before{
+publicationStmt pubPlace:before {
     content: ", "
 }
 
 availability,
-licence{
+licence {
     -oxy-display-tags: none;
     display: block;
 }
 
-licence:before{
+licence:before {
     content: "Lizenz: "
 }
 
@@ -154,28 +157,29 @@ licence:before{
  * ################ */
 
 
-text p[n]:before{
-    content:"(" attr(n) ") ";
-    color:gray;
-    }
+text p[n]:before {
+    content: "(" attr(n) ") ";
+    color: gray;
+}
 
-text note[n]:before{
-    content:"(" attr(n) ") ";
-    color:gray;
-    position: relative; 
+text note[n]:before {
+    content: "(" attr(n) ") ";
+    color: gray;
+    position: relative;
     top: -0.5em;
     font-size: 0.8em;
     -oxy-display-tags: none;
 }
 
-text sic{
+text sic {
     -oxy-display-tags: none;
 }
-text sic:after{
-    content:" [sic!]"
+
+text sic:after {
+    content: " [sic!]"
 }
 
-name{
+name {
     background-color: #f3fccc;
     -oxy-display-tags: none;
 }
@@ -186,7 +190,7 @@ name{
 
 /* h1 */
 text div head,
-text div[type='chapter'] head{
+text div[type='chapter'] head {
     -oxy-placeholder-content: "Überschrift (≙ Ebene h1)";
     font-size: 1.5em;
     font-weight: bold;
@@ -194,23 +198,23 @@ text div[type='chapter'] head{
 }
 
 /* h2 */
-text div > div head,
-text div[type='chapter'] div[type='subchapter'] head{
+text div>div head,
+text div[type='chapter'] div[type='subchapter'] head {
     -oxy-placeholder-content: "Überschrift (≙ Ebene h2)";
     font-size: 1.3em;
     font-weight: bold;
 }
 
 /* h3 */
-text div > div > div head,
-text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] head{
+text div>div>div head,
+text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] head {
     -oxy-placeholder-content: "Überschrift ≙ Ebene h3";
     font-size: 1.1em;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 /* h4 */
-text div > div > div > div head,
+text div>div>div>div head,
 text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] head {
     -oxy-placeholder-content: "Überschrift (≙ Ebene h4)";
     font-size: 1.1em;
@@ -218,19 +222,19 @@ text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] div[type=
 }
 
 /* h5 */
-text div > div > div > div > div head,
+text div>div>div>div>div head,
 text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] head {
     -oxy-placeholder-content: "Überschrift (≙ Ebene h5)";
     font-size: 1em;
-    font-style:italic
+    font-style: italic
 }
 
 /* h6 */
-text div > div > div > div > div > div head,
+text div>div>div>div>div>div head,
 text div[type='chapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] div[type='subchapter'] head {
     -oxy-placeholder-content: "Überschrift (≙ Ebene h6)";
     font-size: 1em;
-    font-style:italic;
+    font-style: italic;
     text-decoration: underline;
 }
 
@@ -241,7 +245,7 @@ text list,
 text list item {
     display: block;
     -oxy-display-tags: none;
-    font-family:arial, helvetica, sans-serif;
+    font-family: arial, helvetica, sans-serif;
 }
 
 text list item {
@@ -249,39 +253,40 @@ text list item {
     -oxy-display-tags: none;
 }
 
-text list[rendition='bulleted']{
-    list-style-type:disc;
+text list[rendition='bulleted'] {
+    list-style-type: disc;
 }
 
-text list[rendition='ordered']{
-    list-style-type:circle;
+text list[rendition='ordered'] {
+    list-style-type: circle;
 }
 
-text list[rendition='ordered decimal']{
-    list-style-type:decimal;
-}
-text list[rendition='ordered_num']{
-    list-style-type:decimal;
+text list[rendition='ordered decimal'] {
+    list-style-type: decimal;
 }
 
-text list[rendition='ordered upper-roman']{
-    list-style-type:upper-roman;
+text list[rendition='ordered_num'] {
+    list-style-type: decimal;
 }
 
-text list[rendition='ordered lower-latin']{
-    list-style-type:lower-latin;
+text list[rendition='ordered upper-roman'] {
+    list-style-type: upper-roman;
 }
 
-text list[rendition='ordered upper-latin']{
-    list-style-type:upper-latin;
+text list[rendition='ordered lower-latin'] {
+    list-style-type: lower-latin;
 }
 
-text list[rendition='ordered lower-roman']{
-    list-style-type:lower-roman;
+text list[rendition='ordered upper-latin'] {
+    list-style-type: upper-latin;
 }
 
-text list[rendition='none']{
-    list-style-type:none;
+text list[rendition='ordered lower-roman'] {
+    list-style-type: lower-roman;
+}
+
+text list[rendition='none'] {
+    list-style-type: none;
 }
 
 text list {
@@ -292,39 +297,39 @@ text list {
  * ##### ZITATE #####
  * ################## */
 
-quote[rendition]{
+quote[rendition] {
     font-family: BBAWfont;
     -oxy-display-tags: none;
     -oxy-show-placeholder: always;
 }
 
-quote[rendition='introQuote']{
+quote[rendition='introQuote'] {
     display: block;
-    margin:0.5em 10em 0.5em 1.5em;
+    margin: 0.5em 10em 0.5em 1.5em;
     -oxy-placeholder-content: "Einführungszitat";
 }
 
-quote[rendition='inline']{
+quote[rendition='inline'] {
     font-style: italic;
     -oxy-placeholder-content: "Inline-Zitat";
-    background-color:#F4E4BC;
+    background-color: #F4E4BC;
 }
 
-quote[rendition='block']{
+quote[rendition='block'] {
     display: block;
-    margin:0.5em 10em 0.5em 5em;
+    margin: 0.5em 10em 0.5em 5em;
     -oxy-placeholder-content: "Blockzitat";
 }
 
-quote hi[rendition="#i"]{
+quote hi[rendition="#i"] {
     font-style: normal;
     -oxy-display-tags: none;
 }
 
 text ref[target]:after,
 note ref[target]:after {
-content: " " url(gfx/link.png) ;
-link: attr(target)!important; 
+    content: " " url(gfx/link.png);
+    link: attr(target) !important;
 }
 
 /* Falls ein Platzhalter doch noch benötigt wird 
@@ -339,5 +344,3 @@ text hi[rendition="#b"] {
     font-weight: bold;
     -oxy-display-tags: none;
 }
-
-

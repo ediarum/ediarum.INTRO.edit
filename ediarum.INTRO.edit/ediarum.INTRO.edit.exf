@@ -43,8 +43,10 @@ from the contextual menu.
       <addCss path="${framework}/css/standard.css"/>
       <addCss path="${framework}/css/standard_intro.css"/>
       <addCss path="${framework}/css/optional_links.css" alternate="true" title="+ Links anzeigen"/>
-      <addCss path="${framework}/css/optional_nurVerweise.css" alternate="true" title="+ Verweise hervorheben"/>
-      <addCss path="${framework}/css/optional_nurVerweise_p_note.css" alternate="true" title="+ Absatz- und Fußnotenverweise"/>
+      <addCss path="${framework}/css/optional_nurVerweise.css" alternate="true"
+        title="+ Verweise hervorheben"/>
+      <addCss path="${framework}/css/optional_nurVerweise_p_note.css" alternate="true"
+        title="+ Absatz- und Fußnotenverweise"/>
     </css>
 
     <menu name="ediarum">

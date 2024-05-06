@@ -34,6 +34,75 @@ from the contextual menu.
       <addCss path="${framework}/css/standard.css"/>
       <addCss path="${framework}/css/standard_intro.css"/>
     </css>
+    <menu name="ediarum">
+      <submenu name="Textstruktur">
+        <addAction id="paragraph"/>
+        <submenu name="Zeilenumbruch" iconPath="${framework}/icons/lb20.gif">
+          <addAction id="lb"/>
+          <addAction id="lb[break]"/>
+          <addAction id="lb[break-hyphen]"/>
+        </submenu>
+        <submenu name="Liste" iconPath="${framework}/icons/unorderedList20.png">
+          <addAction id="INTRO_itemizedlist"/>
+          <addAction id="item"/>
+        </submenu>
+        <submenu name="Kapitel">
+          <addAction id="INTRO_div"/>
+          <addAction id="INTRO_div_innerDIV"/>
+        </submenu>
+      </submenu>
+      <submenu name="Textbearbeitungen">
+        <addAction id="INTRO_hi[#b]"/>
+        <addAction id="INTRO_hi[#i]"/>
+        <addAction id="hi[underline]"/>
+        <addAction id="spacing"/>
+      </submenu>
+      <submenu name="HerausgeberInnenbearbeitungen">
+        <addAction id="INTRO_note[foot]"/>
+        <submenu name="Verweise" iconPath="${framework}/icons/verweis20.gif">
+          <addAction id="anchor"/>
+          <addAction id="ref"/>
+          <addAction id="ref[note]"/>
+          <addAction id="INTRO_ref[p]"/>
+          <addAction id="INTRO_ref[note]"/>
+          <addAction id="INTRO_ref[URL]"/>
+        </submenu>
+        <submenu name="Datumsangaben" iconPath="${framework}/icons/date20.gif">
+          <addAction id="date-when"/>
+          <addAction id="from-to"/>
+          <addAction id="date-notBeforeAfter"/>
+        </submenu>
+        <addAction id="foreign"/>
+        <addAction id="hi[#aq_#fr]"/>
+      </submenu>
+      <submenu name="Indizierung &amp; Namen">
+        <addAction id="persName"/>
+        <addAction id="orgName"/>
+        <addAction id="placeName"/>
+        <addAction id="bibl"/>
+        <addAction id="bibl_zotero"/>
+        <addAction id="rs[term]"/>
+        <separator/>
+        <addAction id="index_personen"/>
+        <addAction id="index_places"/>
+        <addAction id="index_bibl"/>
+      </submenu>
+      <separator/>
+      <submenu name="Metadaten">
+        <addAction id="INTRO_title[@type=sub]"/>
+        <addAction id="editor"/>
+        <addAction id="INTRO_abstract"/>
+        <separator/>
+        <submenu name="Revision &amp; Status">
+          <addAction id="INTRO_revisionDesc"/>
+          <addAction id="revisionDesc[@status]"/>
+        </submenu>
+      </submenu>
+      <submenu name="Sonderfunktionen">
+        <addAction id="INTRO_number_p_note"/>
+        <addAction id="ediarum_unwrap"/>
+      </submenu>
+    </menu>
     <toolbars>
       <toolbar name="Text">
         <group name="Kapitel">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="foreign">
+  <a:name>Fremdsprachiger Textabschnitt</a:name>
+  <a:description>Kennzeichnet einen fremdsprachigen Textabschnitt im Manuskript</a:description>
+  <a:smallIconPath href="${framework}/icons/foreign16.gif"/>
+  <a:largeIconPath href="${framework}/icons/foreign20.gif"/>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("foreign")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><foreign xmlns="http://www.tei-c.org/ns/1.0" xml:lang="${ask('Wählen Sie die Sprache aus', combobox, ('grc':'Griechisch'; 'Lat':'Latein'; 'heb':'Hebräisch';'deu':'Deutsch';'fra':'Französisch'; 'eng':'Englisch';'rus':'Russisch';'spa':'Spanisch'; ))}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="date-when">
+  <a:name>Genaues Datum</a:name>
+  <a:description>Genaues Datum</a:description>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("*:date")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><date xmlns="http://www.tei-c.org/ns/1.0" when="${ask('Datum im Format JJJJ-MM-TT')}" calendar="${ask('In der Quelle verwendeter Kalender', combobox, ('#Gregorian':'Gregorianischer';'#Julian':'Julianischer';), '#Gregorian')}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accelerator>ctrl D</a:accelerator>
+  <a:accessKey>B</a:accessKey>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

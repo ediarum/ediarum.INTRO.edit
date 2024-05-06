@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="date-fromto">
+  <a:name>Genaue Zeitspanne</a:name>
+  <a:description>Genaue Zeitspanne (End- und Anfangsdatum sind bekannt)</a:description>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition>oxy:allows-child-element("date")</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><date xmlns="http://www.tei-c.org/ns/1.0" from="${ask('Anfangsdatum im Format JJJJ-MM-TT')}" to="${ask('Endatum im Format JJJJ-MM-TT')}" cert="${ask('Wahrscheinlichkeit der Datierung', combobox, ('high':'hoch';'low':'niedrig';), 'high')}" calendar="${ask('In der Quelle verwendeter Kalender', combobox, ('#Gregorian':'Gregorianischer';'#Julian':'Julianischer';), '#Gregorian')}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:accessKey>B</a:accessKey>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

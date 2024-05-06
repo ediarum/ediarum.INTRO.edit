@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="editor">
+  <a:name>Herausgeber</a:name>
+  <a:description>Herausgeber (Bearbeiter) des edierten Textes</a:description>
+  <a:operations>
+    <a:operation id="InsertFragmentOperation">
+      <a:xpathCondition>//teiHeader/fileDesc/titleStmt</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><editor xmlns="http://www.tei-c.org/ns/1.0">
+  <persName ref="${ask('GND, VIAF etc. (URI) der Person', generic, '')}">
+    <surname>${ask('Nachname', generic, '')}</surname>
+    <forename>${ask('Vorname', generic, '')}</forename>
+  </persName>
+</editor></a:argument>
+        <a:argument name="insertLocation">//teiHeader/fileDesc/titleStmt</a:argument>
+        <a:argument name="insertPosition">Inside as last child</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

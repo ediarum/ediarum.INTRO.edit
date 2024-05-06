@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="hi[#aq_#fr]">
+  <a:name>Schriftartwechsel</a:name>
+  <a:description>Hervorhebung der Schriftart (Antiqua bzw. Fraktur)</a:description>
+  <a:operations>
+    <a:operation id="SurroundWithFragmentOperation">
+      <a:xpathCondition> oxy:allows-child-element('hi')</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="fragment"><hi xmlns="http://www.tei-c.org/ns/1.0" rendition="${ask('Schriftart', combobox, ('#aq':'Antiqua bzw. lateinische Schrift';'#fr':'Fraktur bzw. Kurrent';), '#aq')}"/></a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

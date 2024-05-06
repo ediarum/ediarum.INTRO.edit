@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="INTRO_number_p_note">
+  <a:name>Absätze &amp; Fußnoten nummerieren</a:name>
+  <a:description>zählt Absätze &amp; Fußnoten und vergibt eine xmld:id</a:description>
+  <a:operations>
+    <a:operation id="XSLTOperation">
+      <a:xpathCondition>ancestor-or-self::text</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="script">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+    <xsl:import href="${framework}/resources/setNumber_INTRO.xsl"/>
+</xsl:stylesheet></a:argument>
+        <a:argument name="sourceLocation">//body</a:argument>
+        <a:argument name="targetLocation">//body</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>true</a:enabledInReadOnlyContext>
+</a:authorAction>

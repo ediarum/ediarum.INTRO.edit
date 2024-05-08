@@ -25,6 +25,13 @@ from the contextual menu.
       <name>ediarum.INTRO</name>
     </defaultScenarios>
   </validationScenarios>
+  <transformationScenarios>
+    <addScenarios href="scenarios/pdf_generation.scenarios"/>
+    <defaultScenarios>
+      <name>ediarum.BASE.pdf_xsl</name>
+      <name>ediarum.BASE.pdf_css</name>
+    </defaultScenarios>
+  </transformationScenarios>
   <classpath>
     <addEntry path="${framework}/tei.jar"/>
     <addEntry path="${framework}/ediarum.jar"/>

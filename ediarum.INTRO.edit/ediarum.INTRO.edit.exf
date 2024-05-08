@@ -19,7 +19,7 @@ from the contextual menu.
       attributeValue="introduction*"/>
   </associationRules>
   <validationScenarios>
-    <addScenarios href="validation/ediarum.INTRO"/>
+    <addScenarios href="validation/ediarum.INTRO.validation"/>
     <!-- <defaultScenarios> seems to have no effect (see menu option "Configure validation scenarios"), but validation seems to work anyway -->
     <defaultScenarios>
       <name>ediarum.INTRO</name>

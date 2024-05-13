@@ -27,7 +27,7 @@
 						<String></String>
 					</field>
 					<field name="inputXSLURL">
-						<String>${baseFramework}/resources/pdf_print_project.xsl</String>
+						<String>${framework}/resources/pdf_print_project.xsl</String>
 					</field>
 					<field name="inputXMLURL">
 						<String>${currentFileURL}</String>
@@ -48,7 +48,7 @@
 						<Boolean>false</Boolean>
 					</field>
 					<field name="outputResource">
-						<String>${baseFramework}/resources/ediarum_pdf.html</String>
+						<String>${framework}/resources/ediarum_pdf.html</String>
 					</field>
 					<field name="openOtherLocationInBrowser">
 						<Boolean>false</Boolean>
@@ -159,7 +159,7 @@
 									<String></String>
 								</field>
 								<field name="value">
-									<String>${baseFramework}/resources/ediarum_pdf.html</String>
+									<String>${framework}/resources/ediarum_pdf.html</String>
 								</field>
 								<field name="defaultValue">
 									<null/>
@@ -182,7 +182,7 @@
 									<String></String>
 								</field>
 								<field name="value">
-									<String>${baseFramework}/css/pdf_print.css</String>
+									<String>${framework}/css/pdf_print.css</String>
 								</field>
 								<field name="defaultValue">
 									<null/>

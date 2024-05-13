@@ -6,6 +6,10 @@
             <serialized xml:space="preserve">
                 <serializableOrderedMap>
                     <entry>
+                        <String>author.convert.external.content.on.paste</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                    <entry>
                         <String>auto.correct.double.quotes</String>
                         <autoCorrectQuotes>
                             <field name="enabled">

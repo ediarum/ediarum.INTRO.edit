@@ -209,17 +209,6 @@
                             </userEditorVariable>
                             <userEditorVariable>
                                 <field name="name">
-                                    <String>${mega_printview}</String>
-                                </field>
-                                <field name="value">
-                                    <String>${ediarum_website_base}/mega/rest/db/projects/mega/web/print.xql?id=${xpath_eval(/*:TEI/@xml:id/data(.))}</String>
-                                </field>
-                                <field name="shortDescription">
-                                    <String></String>
-                                </field>
-                            </userEditorVariable>
-                            <userEditorVariable>
-                                <field name="name">
                                     <String>${ediarum_website_org}</String>
                                 </field>
                                 <field name="value">
@@ -238,28 +227,6 @@
                                 </field>
                                 <field name="shortDescription">
                                     <String></String>
-                                </field>
-                            </userEditorVariable>
-                            <userEditorVariable>
-                                <field name="name">
-                                    <String>${ediarum_website_periodika}</String>
-                                </field>
-                                <field name="value">
-                                    <String>/register/periodika/detail.xql</String>
-                                </field>
-                                <field name="shortDescription">
-                                    <String></String>
-                                </field>
-                            </userEditorVariable>
-                            <userEditorVariable>
-                                <field name="name">
-                                    <String>${baseFramework}</String>
-                                </field>
-                                <field name="value">
-                                    <String>ediarum.BASE.edit</String>
-                                </field>
-                                <field name="shortDescription">
-                                    <String>Ediarum Basis-Framework</String>
                                 </field>
                             </userEditorVariable>
                             <userEditorVariable>

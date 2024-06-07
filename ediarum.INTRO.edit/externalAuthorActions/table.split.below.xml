@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="table.split.below">
+  <a:name>${i18n(table.split.below)}</a:name>
+  <a:description>${i18n(table.split.below_description)}</a:description>
+  <a:smallIconPath href="/images/TableSplitCellDown16.gif"/>
+  <a:largeIconPath href="/images/TableSplitCellDown20.gif"/>
+  <a:operations>
+    <a:operation id="ro.sync.ecss.extensions.tei.table.SplitCellAboveBelowOperation">
+      <a:xpathCondition>ancestor-or-self::*:cell[namespace-uri()='http://www.tei-c.org/ns/1.0']</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="Split point">Below</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

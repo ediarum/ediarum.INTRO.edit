@@ -73,6 +73,27 @@ from the contextual menu.
           <addAction id="INTRO_itemizedlist"/>
           <addAction id="item"/>
         </submenu>
+		<submenu name="Tabelle">
+          <addAction id="insert.table"/>
+		  <separator/>
+		  <addAction id="insert.table.column"/>
+		  <addAction id="delete.table.column"/>
+	      <separator/>
+		  <addAction id="insert.table.row"/>
+		  <addAction id="delete.table.row"/>
+		  <separator/>
+		  <addAction id="insert.table.cell"/>
+		  <addAction id="table.join.row.cells"/>
+		  <separator/>
+		  <addAction id="table.join.cell.above"/>
+		  <addAction id="table.join.cell.below"/>
+		  <addAction id="table.split.above"/>
+		  <addAction id="table.split.below"/>
+		  <addAction id="table.split.left"/>
+		  <addAction id="table.split.right"/>
+		  <separator/>
+		  <addAction id="table.drawn"/>
+        </submenu>
         <submenu name="Kapitel">
           <addAction id="INTRO_div"/>
           <addAction id="INTRO_div_innerDIV"/>
@@ -160,6 +181,15 @@ from the contextual menu.
           <addAction id="INTRO_itemizedlist"/>
           <addAction id="item"/>
         </group>
+		<group name="Tabelle" smallIconPath="/images/Table16.gif"
+          largeIconPath="/images/Table20.gif">
+          <addAction id="insert.table"/>
+          <addAction id="insert.table.row"/>
+		  <addAction id="insert.table.column"/>
+		  <addAction id="table.join.row.cells"/>
+		  <addAction id="delete.table.column"/>
+		  <addAction id="delete.table.row"/>
+        </group>
         <addAction id="INTRO_note[foot]"/>
         <addAction id="INTRO_figure_1"/>
         <separator/>
@@ -167,7 +197,7 @@ from the contextual menu.
         <addAction id="INTRO_hi[#i]"/>
         <addAction id="hi[underline]"/>
         <separator/>
-        <group name="Verweiese" smallIconPath="${framework}/icons/verweis16.gif"
+        <group name="Verweise" smallIconPath="${framework}/icons/verweis16.gif"
           largeIconPath="${framework}/icons/verweis20.gif">
           <addAction id="anchor"/>
           <addAction id="ref"/>

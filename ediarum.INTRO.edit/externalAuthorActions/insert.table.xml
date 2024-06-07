@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="insert.table">
+  <a:name>Tabelle einfügen</a:name>
+  <a:description>Fügt eine Tabelle in den Notizbereich eines Tageskalenders ein</a:description>
+  <a:smallIconPath href="/images/Table16.gif"/>
+  <a:largeIconPath href="/images/Table20.gif"/>
+  <a:operations>
+    <a:operation id="ro.sync.ecss.extensions.tei.table.InsertTableOperation">
+      <a:xpathCondition>ancestor-or-self::div</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="defaultNamespace">http://www.tei-c.org/ns/1.0</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

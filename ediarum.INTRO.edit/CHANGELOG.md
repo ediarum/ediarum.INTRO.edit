@@ -1,0 +1,1 @@
+# CHANGELOG ediarum.INTRO.edit ## 1.1.0 vom 07.06.2024 * FEATURE: Tabellen hinzugefügt. ## 1.0.0 * Erste Standalone-Version. 

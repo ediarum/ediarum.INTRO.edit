@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="insert.table.row">
+  <a:name>Zeile einfügen</a:name>
+  <a:description>Fügt eine Zeile in eine Tabelle ein</a:description>
+  <a:smallIconPath href="/images/TableRow16.gif"/>
+  <a:largeIconPath href="/images/TableRow20.gif"/>
+  <a:operations>
+    <a:operation id="ro.sync.ecss.extensions.tei.table.InsertRowOperation">
+      <a:xpathCondition>self::*:table[namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="insertPosition">Inside as first child</a:argument>
+        <a:argument name="namespace">http://www.tei-c.org/ns/1.0</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ro.sync.ecss.extensions.tei.table.InsertRowOperation">
+      <a:xpathCondition>ancestor-or-self::*:row[namespace-uri() = "http://www.tei-c.org/ns/1.0"]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="insertLocation">ancestor-or-self::*:row[namespace-uri() = "http://www.tei-c.org/ns/1.0"][1]</a:argument>
+        <a:argument name="insertPosition">After</a:argument>
+        <a:argument name="namespace">http://www.tei-c.org/ns/1.0</a:argument>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

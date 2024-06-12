@@ -8,10 +8,10 @@
     sondern durch explizite Zeichnung der Gitterlinien.</a:description>
   <a:operations>
     <a:operation id="ChangeAttributeOperation">
-      <a:xpathCondition>ancestor-or-self::table[@rendition="drawn"]</a:xpathCondition>
+      <a:xpathCondition>ancestor-or-self::table[@rend="drawn"]</a:xpathCondition>
       <a:arguments>
         <a:argument name="elementLocation">ancestor-or-self::table</a:argument>
-        <a:argument name="name">rendition</a:argument>
+        <a:argument name="name">rend</a:argument>
         <a:argument name="value"/>
       </a:arguments>
     </a:operation>
@@ -19,7 +19,7 @@
       <a:xpathCondition>ancestor-or-self::table</a:xpathCondition>
       <a:arguments>
         <a:argument name="elementLocation">ancestor-or-self::table</a:argument>
-        <a:argument name="name">rendition</a:argument>
+        <a:argument name="name">rend</a:argument>
         <a:argument name="value">drawn</a:argument>
       </a:arguments>
     </a:operation>

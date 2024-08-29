@@ -1,6 +1,6 @@
 # ediarum.INTRO.edit
 
-Version: 1.0.0
+Version: 1.1.0
 
 © 2024 –
 
@@ -43,6 +43,37 @@ following components:
 ## Documentation
 
 TBD
+
+### projektspezifisches INTRO anlegen
+
+1.) Vorbereitung
+* INTRO muss installiert sein!
+  * => http://telota.bbaw.de/ediarum/intro/edit/update.xml
+* Die Editorvariable `${ediarum_id}` muss eingetragen sein, damit ID richtig vergeben werden.
+  * Falls das Projekt den ediarum-ID-Generator verwendet, ist die Variable bereits eingetragen. Andernfalls siehe <https://www.ediarum.org/docs/set-up/DE/topics/setup/oxygen_projekt-anlegen.html> bzw. <https://www.ediarum.org/docs/set-up/DE/topics/customization/id-generator.html>
+
+2.) Projektdatei
+* Optionen > Orte: Muss auf projektspezifisch umgestellt werden. Bei Benutzerdefinierter Pfad dann `${pdu}` eintragen, damit sowohl Framework als auch EXF erkannt werden.
+
+3.) EXF-Datei anlegen
+* Wichtig: Basis-Framework, welches erweitert wird, in `<script @base>` (hier ="ediarum.INTRO.edit") eintragen.
+  * Bezüge auf das Basis-Framework werden dann automatisch gesetzt und in der GUI-Ansicht in Oxygen angezeigt, z.B. `${framework(ediarum.INTRO.edit)}/css/standard.css`.
+* Tipp: Als Vorlage-Datei das Basis-EXF nehmen und dann auskommentieren/entfernen, was nicht benötigt wird.
+* Tipp: Direkt einen Ordner für projektspezifische Aktionen anlegen: "externalAuthorActions"
+
+4.) Aktionen anpassen
+* Nach erstellen des EXF-Files Oxygen einmal neu starten. Dann wird automatisch ein Ordner (z.B. "ediarum.AVHR.intro_externalAuthorActions") im Projektverzeichnis angelegt. In diesem sind die Aktionen-XMLs des Basis-Frameworks hinterlegt.
+  * Ordner wird bei jedem Neustart von Oxygen erstellt, Änderungen werden zurückgesetzt => Hier nur Basis-Aktionen.
+* Probeweise z.B. PDF-Ausgabe anpassen
+  * XML nach "externalAuthorActions" (NICHT "ediarum.AVHR.intro_externalAuthorActions"!) kopieren, ID und Dateinamen anpassen.
+
+#### Weiteres
+* Wie fügt man Aktionen hinzu? => addAction id="XXX"
+* Wie entfernt man Basis-Aktionen aus dem Projekt-Menü? => removeAction id="XXX"
+
+#### Probleme und Fragen
+- Wenn die Datei fehlerhaft ist (z.B. eine fehlerhafte Verlinkung), wird das Framework in der Optionen (Dokumenttypen-Zuordnung) nicht angezeigt.
+- Man kann eigene Aktionen nicht in der Oxygen-Ansicht öffenen. (Warum?)
 
 
 ## License

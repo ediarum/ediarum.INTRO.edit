@@ -1,0 +1,33 @@
+message: "If you use this software, please cite it using these metadata."
+authors:
+    - family-names: Arndt	
+      given-names: Nadine 
+      orcid: "https://orcid.org/0000-0002-2257-7236"
+    - family-names: Fechner	
+      given-names: Martin 
+      orcid: "https://orcid.org/0000-0001-9233-0653"
+    - family-names: Grabsch
+      given-names: Sascha
+      orcid: "https://orcid.org/0000-0002-7447-4589"
+    - family-names: Wierzoch
+      given-names: Jan
+      orcid: "https://orcid.org/0000-0002-6388-4064"
+  
+title: ediarum.BASE.edit 
+abstract: "ediarum.BASE.edit is an input interface for New Germanic editions in Oxygen XML Author. It enables easy and convenient transcription and annotation of manuscripts or prints in TEI-XML. The data model is largely based on the Base format of the German Text Archive (DTA), a subset of the TEI guidelines."
+type: software
+date-released: "2024-06-07"
+version: 1.1.0
+repository-code: "https://github.com/ediarum/ediarum.INTRO.edit"
+license: "GPL-3.0"
+url: "https://www.ediarum.org"
+references: 
+  - authors:
+      - family-names: Fechner
+        given-names: Martin
+        orcid: "https://orcid.org/0000-0001-9233-0653"
+    title: "ediarum.JAR"
+    type: software
+    repository-code: "https://github.com/ediarum/ediarum.JAR" 
+    version: 3.1.0
+cff-version: 1.2.0

@@ -2,20 +2,22 @@
 
 Version: 1.1.0
 
-© 2024 –
+© 2024- by Berlin-Brandenburg Academey of Sciences and Humanities
 
-Developed by TELOTA, the DH working group of the Berlin-Brandenburg Academey of
-Sciences and Humanities  
-<http://www.bbaw.de/telota>  
-<mailto:telota@bbaw.de>
+Part of ediarum (https://www.ediarum.org, ediarum@bbaw.de)
 
-Authors:
+Developed by TELOTA (https://www.bbaw.de/telota, telota@bbaw.de), a DH working group of the Berlin-Brandenburg Academey of Sciences and Humanities.
 
-TBD
+Ediarum Core Team:
 
-Contributors:
+* Nadine Arndt
+* Martin Fechner
+* Jan Wierzoch
 
-TBD
+Developers of ediarum.REGISTER:
+
+* Sascha Grabsch
+* Jan Wierzoch
 
 ## What does it do?
 

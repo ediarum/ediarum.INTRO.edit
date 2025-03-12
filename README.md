@@ -36,17 +36,19 @@ TEI-XML based indexes for people, places, organizations and terms in ediarum.
 The oXygen framework ediarum.INTRO.edit comes as a ZIP archive containing the
 following components:
 
-- framework file (`.framework`) for oXygen XML Author
+- framework extension script file (`.exf`) for oXygen XML Author
 - two JAVA files `ediarum.jar` and `tei.jar`
 - Cascading Stylesheets
 - Icons for the toolbar
-- Other resources, i.e. XSLT stylesheets
+- Other resources, i.e. XSLT stylesheets and XML templates
 
 ## Documentation
 
 TBD
 
 ### projektspezifisches INTRO anlegen
+
+**ACHTUNG:** Die Frameworks auf EXF-Basis unterstützten Default Schema (`<defaultSchema>`) erst ab Oxygen v25.1!
 
 1.) Vorbereitung
 * INTRO muss installiert sein!

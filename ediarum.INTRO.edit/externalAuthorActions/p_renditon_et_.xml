@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<a:authorAction xmlns:a="http://www.oxygenxml.com/ns/author/external-action"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.oxygenxml.com/ns/author/external-action http://www.oxygenxml.com/ns/author/external-action/authorAction.xsd"
+  id="p[renditon=#et]">
+  <a:name>Einrückung</a:name>
+  <a:description>Kennzeichnet eine Einrückung (Absatz, erste Zeile, hängend).</a:description>
+  <a:operations>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::p[not(@rendition='#et') and not(@rendition='#indent') and not(@rendition='#hanging')]
+or ancestor-or-self::list[not(@rendition='#et') and not(@rendition='#indent') and not(@rendition='#hanging')]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::p|ancestor-or-self::list</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="value">${ask('Wählen Sie die Art der Einrückung aus', combobox, ('#et':'Absatz/Liste eingerückt'; '#indent':'erste Zeile eingerückt'; '#hanging':'hängender Absatz';), '#et')}</a:argument>
+      </a:arguments>
+    </a:operation>
+    <a:operation id="ChangeAttributeOperation">
+      <a:xpathCondition>ancestor-or-self::p[(@rendition='#et') or (@rendition='#indent') or (@rendition='#hanging')]
+or ancestor-or-self::list[(@rendition='#et') or (@rendition='#indent') or (@rendition='#hanging')]</a:xpathCondition>
+      <a:arguments>
+        <a:argument name="elementLocation">ancestor-or-self::p|ancestor-or-self::list</a:argument>
+        <a:argument name="name">rendition</a:argument>
+        <a:argument name="value"/>
+      </a:arguments>
+    </a:operation>
+  </a:operations>
+  <a:enabledInReadOnlyContext>false</a:enabledInReadOnlyContext>
+</a:authorAction>

@@ -158,6 +158,7 @@ from the contextual menu.
       <submenu name="Sonderfunktionen">
         <addAction id="INTRO_number_p_note"/>
         <addAction id="ediarum_unwrap"/>
+        <addAction id="p[renditon=#et]"/>
       </submenu>
 
     </menu>

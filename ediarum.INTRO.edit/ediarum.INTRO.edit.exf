@@ -64,6 +64,7 @@ from the contextual menu.
 
       <submenu name="Textstruktur">
         <addAction id="paragraph"/>
+        <addAction id="milestone"/>
         <submenu name="Zeilenumbruch" iconPath="${framework}/icons/lb20.gif">
           <addAction id="lb"/>
           <addAction id="lb[break]"/>

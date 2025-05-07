@@ -1,8 +1,8 @@
 # ediarum.INTRO.edit
 
-Version: 1.1.0
+Version: 1.2.0
 
-© 2024- by Berlin-Brandenburg Academey of Sciences and Humanities
+© 2024-2025 by Berlin-Brandenburg Academey of Sciences and Humanities
 
 Part of ediarum (https://www.ediarum.org, ediarum@bbaw.de)
 

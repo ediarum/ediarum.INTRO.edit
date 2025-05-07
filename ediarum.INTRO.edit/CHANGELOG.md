@@ -1,1 +1,1 @@
-# CHANGELOG ediarum.INTRO.edit ## 1.1.0 vom 07.06.2024 * FEATURE: Tabellen hinzugefügt. ## 1.0.0 * Erste Standalone-Version. 
+# CHANGELOG ediarum.INTRO.edit ## 1.2.0 vom 07.05.2025* FEATURE #7: Aktion "Einrückungen" erweitert* FEATURE #8: Aktion "Horizontale Trennlinie" hinzugefügt## 1.1.0 vom 07.06.2024 * FEATURE #5: Tabellen hinzugefügt ## 1.0.0 * Erste Standalone-Version 

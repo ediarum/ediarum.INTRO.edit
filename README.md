@@ -80,6 +80,10 @@ TBD
 - Man kann eigene Aktionen nicht in der Oxygen-Ansicht öffenen. (Warum?)
 
 
+## Contribution
+
+If you want to contribute to ediarum, feel free to open an pull request on the main branch.
+
 ## License
 
 ediarum.INTRO.edit is free software: you can redistribute it and/or modify
